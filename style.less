@@ -3,45 +3,45 @@
 */
 @import url(modules.less);
 
+/**
+* Colors and Fonts
+*/
+@import url(colorsandfonts.less);
+
+/**
+* Menu
+*/
+@import url(menu.less);
+
+
 /** --------------------------------------------------------------
- *  Header
- */
+ *  Theme colors
 
-// Size of max navbar button
-.rm-max .rm-small .rm-button {
-    font-size: 2em;
-}
+@whitespaceColor: #2F829C;
+@buttonColor: #305E75;
+@buttonHoverColor: #D1603B;
+@buttonSelectedColor: #1E7782;
+@buttonNextPrevColor: #D1603B;
+@buttonTextColor: lightgrey;
+@breadcrumbColor: #933138;
+@breadcrumbBgColor: beige;
+@breadcrumbBorderColor: black;
+@footerBgColor: #305E75;
+@footerTextColor: #FFF;
+@linkColor: blue;
+@linkVisitedColor: green;
+@linkHoverColor: purple;
+@headerColor: #59B381;
+@sidebarBgColor: beige;
 
-@maxButtonFontSize: 2em;
+** --------------------------------------------------------------
+ *  Theme Fonts
+ *
+@fontP: Tahoma;
+@fontHeader: Arial;
+@fontLink: Tahoma;
+*/
 
-// Style navbar
-.rm-desktop li {
-    background-color: #096;
-}
-
-@navbarItemBgColor: #096;
-
-
-// Size each item in the header
-.site-logo-text,
-.navbar2,
-.profile {
-    float: left;
-    width: 30%;
-}
-
-.site-header {
-    height: 80px;
-}
-
-// Site title
-.site-logo-text {
-    font-size: 2em;
-
-    a {
-        text-decoration: none;
-    }
-}
 
 
 /** --------------------------------------------------------------
@@ -58,6 +58,129 @@
         vertical-align: bottom;
     }
 }
+
+
+/** ---------------------------------------------------------------
+ *  Flash
+ */
+.flash-wrap {
+    padding: 10px;
+}
+
+
+/** ---------------------------------------------------------------
+ *  General Styles. Colors, fonts and padding
+ */
+
+ body {
+     background-color: @whitespaceColor;
+ }
+
+.wrap-all {
+    background-color: white;
+}
+
+.outer-wrap-main {
+    padding: 10px;
+}
+p {
+    font-family: @fontP;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: @fontHeader;
+}
+
+a {
+    font-family: @fontLink;
+}
+
+a:link {
+    color: @linkColor;
+}
+
+a:visited {
+    color: @linkVisitedColor;
+}
+a:hover {
+    color: @linkHoverColor;
+}
+
+.next-previous {
+    font-weight: bolder;
+    a {
+        color: @buttonNextPrevColor;
+    }
+}
+
+/** ---------------------------------------------------------------
+ *  breadcrumbs
+ */
+.breadcrumb-list {
+    background-color: @breadcrumbBgColor;
+    li {
+        display: inline-block;
+        border: 1px solid @breadcrumbBorderColor;
+        border-radius: 3px;
+        padding: 2px;
+        margin: 3px;
+        background-color: @breadcrumbColor;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+/** ---------------------------------------------------------------
+ *  breadcrumbs
+ */
+.byline {
+    border: 1px solid black;
+    overflow: auto;
+    padding: 5px;
+    margin: 1em 100px 1em 100px;
+    width: 600px;
+}
+
+
+/** ---------------------------------------------------------------
+ *  sidebar
+ */
+.sidebar {
+    background-color: @sidebarBgColor;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    border-bottom: solid 2px black;
+    border-right: solid black 2px;
+}
+
+/** ---------------------------------------------------------------
+ *  Footer
+ */
+
+.outer-wrap-footer {
+    font-size: 0.8em;
+    color: @footerTextColor;
+    background-color: @footerBgColor;
+}
+
+.footer-column-wrapper {
+    border-bottom: 1px solid white;
+    .footer-column {
+        border-right: 1px solid white;
+        .footer-column-x {
+            margin: 5px;
+        }
+    }
+}
+
 
 /** --------------------------------------------------------------
  *  Responsive design
@@ -78,6 +201,10 @@ img {
     .profile {
         width: 10%;
     }
+
+    body {
+        background-color: @footerBgColor;
+    }
 }
 
 
@@ -86,12 +213,17 @@ img {
         //width: 100%;
         display: none;
     }
+
+    .byline {
+        display: none;
+    }
 }
 
 
 @media screen and (max-width: 700px) {
     .footer-column {
         width: 100%;
+        border-bottom: 1px solid white;
     }
 }
 

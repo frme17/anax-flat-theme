@@ -1,0 +1,46 @@
+/** --------------------------------------------------------------
+ *  Menu
+ */
+
+@maxButtonFontSize: 2em;
+@navbarItemBgColor: @buttonColor;
+@navbarItemColor: @buttonTextColor;
+@navbarItemHoverColor: @buttonTextColor;
+@navbarItemHoverBgColor: @buttonHoverColor;
+@navbarItemSelectedColor: @buttonTextColor;
+@navbarItemSelectedBgColor: @buttonSelectedColor;
+
+// Size each item in the header
+.site-logo-text,
+.navbar2,
+.profile {
+    float: left;
+    width: 30%;
+}
+
+.site-header {
+    height: 50px;
+    padding: 10px;
+    background-color: @headerColor;
+}
+
+// Site title
+.site-logo-text {
+    font-size: 2em;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.rm-desktop {
+    li {
+        &.rm-selected-parent,  // For submenu
+        &.rm-selected,
+        &.selected-parent, // for selected descendants
+        &.selected {
+            color: @navbarItemSelectedColor;
+            background-color: @navbarItemSelectedBgColor;
+        }
+    }
+}
