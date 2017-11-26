@@ -18,24 +18,25 @@
  */
 .logo-1 {
     position: absolute;
-    top: 70px;
-    left: -140px;
+    top: 10px;
+    left: 10px;
 }
 
-.site-logo-text-icon {
+/*.site-logo-text-icon {
     img {
         vertical-align: bottom;
     }
 }
 
-
 /** ---------------------------------------------------------------
  *  Flash
  */
 .flash-wrap {
-    padding: 10px;
+    .column(12);
+    padding-left: 13px;
+    padding-top: 4px;
+    height: (@magicNumber * 8) - 4;
 }
-
 
 /** ---------------------------------------------------------------
  *  General Styles. Colors, fonts and padding
@@ -45,139 +46,146 @@
      background-color: @whitespaceColor;
  }
 
-.wrap-all {
-    background-color: white;
+ a:link {
+     color: @linkColor;
+     text-decoration: none;
+ }
+
+ a:visited {
+     color: @linkVisitedColor;
+ }
+ a:hover {
+     /*color: @linkHoverColor;*/
+     text-decoration: underline;
+ }
+
+ .next-previous {
+     font-weight: bolder;
+     a {
+         color: @buttonNextPrevColor;
+     }
+ }
+
+ /** ---------------------------------------------------------------
+  *  breadcrumbs
+  */
+.breadcrumb-wrap {
+    .column(12);
 }
 
-.outer-wrap-main {
-    padding: 10px;
-}
-p {
-    font-family: @fontP;
+ .breadcrumb-list {
+     background-color: @breadcrumbBgColor;
+
+     ul {
+         margin-top: 0px;
+         height: @magicNumber * 2;
+     }
+
+     li {
+         display: inline-block;
+         border: 1px solid @breadcrumbBorderColor;
+         border-radius: 3px;
+         padding: 2px;
+         margin: 3px;
+         margin-top: 8px;
+         background-color: @breadcrumbColor;
+         a {
+             color: white;
+             text-decoration: none;
+         }
+     }
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: @fontHeader;
-}
-
-a {
-    font-family: @fontLink;
-}
-
-a:link {
-    color: @linkColor;
-}
-
-a:visited {
-    color: @linkVisitedColor;
-}
-a:hover {
-    color: @linkHoverColor;
-}
-
-.next-previous {
-    font-weight: bolder;
-    a {
-        color: @buttonNextPrevColor;
-    }
-}
-
-/** ---------------------------------------------------------------
- *  breadcrumbs
+/** -------------------------------------------------------------
+ * Margin on image, to make text flow Typographically
  */
-.breadcrumb-list {
-    background-color: @breadcrumbBgColor;
-    li {
-        display: inline-block;
-        border: 1px solid @breadcrumbBorderColor;
-        border-radius: 3px;
-        padding: 2px;
-        margin: 3px;
-        background-color: @breadcrumbColor;
-        a {
-            color: white;
-            text-decoration: none;
-        }
-    }
+.leninbasket {
+    margin-bottom: 1em;
 }
 
-/** ---------------------------------------------------------------
- *  breadcrumbs
- */
-.byline {
-    border: 1px solid black;
-    overflow: auto;
-    padding: 5px;
-    margin: 1em 100px 1em 100px;
-    width: 600px;
-}
-
-
-/** ---------------------------------------------------------------
- *  sidebar
- */
-.sidebar {
-    background-color: @sidebarBgColor;
-    margin-right: 7px;
-    margin-bottom: 7px;
-    padding: 5px;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    border-bottom: solid 2px black;
-    border-right: solid black 2px;
-}
-
-/** ---------------------------------------------------------------
+/** ------------------------------------------------------------
  *  Footer
  */
 
 .outer-wrap-footer {
-    font-size: 0.8em;
-    color: @footerTextColor;
     background-color: @footerBgColor;
-}
-
-.footer-column-wrapper {
-    border-bottom: 1px solid white;
-    .footer-column {
-        border-right: 1px solid white;
-        .footer-column-x {
-            margin: 5px;
-        }
+    li {
+        list-style: none;
     }
 }
 
+.inner-wrap.inner-wrap-footer {
+    background-color: @footerBgColor;
+    color: @footerTextColor;
+    text-align: center;
+}
 
-/** --------------------------------------------------------------
+.footer-column-2 {
+    border-left: 1px solid cadetblue;
+    border-right: 1px solid cadetblue;
+}
+
+.site-footer {
+    border-top: 1px solid cadetblue;
+}
+
+
+/** ------------------------------------------------------------
  *  Responsive design
  */
 img {
     max-width: 100%;
 }
 
-@media screen and (max-width: 900px) {
-    .site-logo-text {
-        width: 40%;
-    }
-
-    .navbar2 {
-        width: 50%;
-    }
-
-    .profile {
-        width: 10%;
-    }
-
-    body {
-        background-color: @footerBgColor;
+@media screen and (max-width: 1250px) {
+    .logo-1 {
+        display: none;
     }
 }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 960px) {
+    .inner-wrap {
+        width: 100%;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+
+    .site-logo-text {
+        .column(9);
+    }
+
+    .profile {
+        .column(3);
+    }
+
+    .flash-wrap {
+        padding-left: 0px;
+        height: auto;
+    }
+
+    .main {
+        .column(10);
+        .push(1);
+    }
+
+    .main.has-sidebar-left {
+        .column(8);
+    }
+
+    .sidebar-left {
+        .column(3);
+        border-right: 1px solid lightgrey;
+        padding-left: 5px;
+        .adjustwidth-border(3, 6);
+    }
+
+}
+
+
+/*@media screen and (max-width: 750px) {
     .sidebar {
         //width: 100%;
         display: none;
@@ -187,22 +195,31 @@ img {
         display: none;
     }
 }
-
+*/
 
 @media screen and (max-width: 700px) {
     .footer-column {
-        width: 100%;
-        border-bottom: 1px solid white;
+        .column(12);
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid cadetblue;
+    }
+    .byline {
+        .column(10);
+        .push(1);
+        border: 1px solid black;
+        .adjustwidth-border(10, 2);
     }
 }
 
+@media screen and (max-width: 570px) {
+.sidebar-left {
+    .column(12);
+        border-bottom: 1px solid lightgrey;
+        margin-top: 0px;
+    }
+    .main {
+        .column(12);
+    }
 
-@media screen and (max-width: 560px) {
-     .site-logo-text {
-         width: 90%;
-     }
-
-     .navbar2 {
-         display: none;
-     }
- }
+}
