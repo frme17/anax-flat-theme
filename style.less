@@ -1,106 +1,86 @@
 /**
-* Anax Flat theme.
+* import Base theme
 */
-@import url(modules.less);
+@import url(base.less);
 
-/**
-* Colors and Fonts
-*/
-@import url(colorsandfonts.less);
-
-/**
-* Menu
-*/
-@import url(menu.less);
-
-/** --------------------------------------------------------------
- *  Logo images
+/** -----------------------------------------------------------------
+ *  Colors
  */
-.logo-1 {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
+@canvasColor: #4C7785;
+@fontColor: black;
 
-/*.site-logo-text-icon {
-    img {
-        vertical-align: bottom;
-    }
-}
+// Navigation-menu
+@headerColor: #872D36;
+@buttonColor: #671820;
+@buttonHoverColor: #A5464F;
+@buttonSelectedColor: #46080E;
+@buttonTextColor: white;
+@buttonHoverTextColor: white;
+@anaxFlatText: #CE737C;
+@anaxFlatHover: #619EBB;
 
-/** ---------------------------------------------------------------
- *  Flash
- */
-.flash-wrap {
-    .column(12);
-    padding-left: 13px;
-    padding-top: 4px;
-    height: (@magicNumber * 8) - 4;
-}
+//Navigation on report sides
+@buttonNextPrevColor: #103C07;
 
-/** ---------------------------------------------------------------
- *  General Styles. Colors, fonts and padding
- */
+//Breadcrumbs
+@breadcrumbColor: #8B5E2F;
+@breadcrumbBgColor: #D5A777;
+@breadcrumbBorderColor: #482908;
+@breadcrumbTextColor: white;
 
- body {
-     background-color: @whitespaceColor;
- }
+// Footer
+@footerBgColor: #123543;
+@footerTextColor: #FFFFFF;
+@footerBorder: cadetblue;
 
- a:link {
-     color: @linkColor;
-     text-decoration: none;
- }
+// Links
+@linkColor: #619EBB;
+@linkVisitedColor: #BB605F;
+@linkHoverColor: purple;
 
- a:visited {
-     color: @linkVisitedColor;
- }
- a:hover {
-     /*color: @linkHoverColor;*/
-     text-decoration: underline;
- }
+//Sidebar
+@sidebarBgColor: #71B263;
+@sidebarBorder: #103C07;
+@sidebarLinkColor: blue;
+@sidebarVisitedColor: purple;
+@sidebarHoverColor: blue;
 
- .next-previous {
-     font-weight: bolder;
-     a {
-         color: @buttonNextPrevColor;
-     }
- }
-
+@bylineBorder: black;
  /** ---------------------------------------------------------------
   *  breadcrumbs
   */
-.breadcrumb-wrap {
-    .column(12);
-}
-
  .breadcrumb-list {
      background-color: @breadcrumbBgColor;
 
-     ul {
-         margin-top: 0px;
-         height: @magicNumber * 2;
-     }
-
      li {
-         display: inline-block;
          border: 1px solid @breadcrumbBorderColor;
-         border-radius: 3px;
-         padding: 2px;
-         margin: 3px;
-         margin-top: 8px;
          background-color: @breadcrumbColor;
          a {
-             color: white;
+             color: @breadcrumbTextColor;
              text-decoration: none;
          }
      }
 }
 
-/** -------------------------------------------------------------
- * Margin on image, to make text flow Typographically
+
+/** -----------------------------------------------------------
+ * Sidebar
  */
-.leninbasket {
-    margin-bottom: 1em;
+.sidebar-left {
+    border-right: 1px solid @sidebarBorder;
+    background-color: @sidebarBgColor;
+    padding-left: 5px;
+    .adjustwidth-border(2, 6);
+    a:link {
+        color: @sidebarLinkColor;
+    }
+    a:visited {
+        color: @sidebarVisitedColor;
+    }
+    a:hover {
+        color: @sidebarHoverColor;
+        text-decoration: underline;
+    }
 }
 
 /** ------------------------------------------------------------
@@ -121,105 +101,41 @@
 }
 
 .footer-column-2 {
-    border-left: 1px solid cadetblue;
-    border-right: 1px solid cadetblue;
+    border-left: 1px solid @footerBorder;
+    border-right: 1px solid @footerBorder;
 }
 
 .site-footer {
-    border-top: 1px solid cadetblue;
+    border-top: 1px solid @footerBorder;
 }
 
 
 /** ------------------------------------------------------------
  *  Responsive design
  */
-img {
-    max-width: 100%;
-}
-
-@media screen and (max-width: 1250px) {
-    .logo-1 {
-        display: none;
-    }
-}
-
-
 @media screen and (max-width: 960px) {
-    .inner-wrap {
-        width: 100%;
-    }
-
-    .navbar2 {
-        display: none;
-    }
-
-    .site-logo-text {
-        .column(9);
-    }
-
-    .profile {
-        .column(3);
-    }
-
-    .flash-wrap {
-        padding-left: 0px;
-        height: auto;
-    }
-
-    .main {
-        .column(10);
-        .push(1);
-    }
-
-    .main.has-sidebar-left {
-        .column(8);
-    }
-
     .sidebar-left {
-        .column(3);
-        border-right: 1px solid lightgrey;
+        border-right: 1px solid @sidebarBorder;
         padding-left: 5px;
         .adjustwidth-border(3, 6);
     }
-
 }
-
-
-/*@media screen and (max-width: 750px) {
-    .sidebar {
-        //width: 100%;
-        display: none;
-    }
-
-    .byline {
-        display: none;
-    }
-}
-*/
 
 @media screen and (max-width: 700px) {
     .footer-column {
-        .column(12);
         border-left: none;
         border-right: none;
-        border-top: 1px solid cadetblue;
+        border-top: 1px solid @footerBorder;
     }
     .byline {
-        .column(10);
-        .push(1);
-        border: 1px solid black;
+        border: 1px solid @fontColor;
         .adjustwidth-border(10, 2);
     }
 }
 
 @media screen and (max-width: 570px) {
 .sidebar-left {
-    .column(12);
-        border-bottom: 1px solid lightgrey;
+        border-bottom: 1px solid @sidebarBorder;
         margin-top: 0px;
     }
-    .main {
-        .column(12);
-    }
-
 }

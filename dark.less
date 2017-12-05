@@ -1,0 +1,84 @@
+/**
+* import Default theme
+*/
+@import url(style.less);
+
+/** -----------------------------------------------------------------
+ *  Colors
+ */
+@canvasColor: black;
+@fontColor: lime;
+
+// Navigation-menu
+@headerColor: #141414;
+@buttonColor: lighten(@headerColor, 10%);
+@buttonHoverColor: lighten(@headerColor, 20%);
+@buttonSelectedColor: lighten(@headerColor, 10%);
+@buttonTextColor: #4A70D1;
+@buttonHoverTextColor: white;
+@anaxFlatText: #4A70D1;
+@anaxFlatHover: white;
+
+
+//Navigation on report sides
+@buttonNextPrevColor: #4A70D1;
+
+//Breadcrumbs
+@breadcrumbColor: lighten(@headerColor, 20%);
+@breadcrumbBgColor: lighten(@headerColor, 10%);
+@breadcrumbBorderColor: lighten(@headerColor, 20%);
+@breadcrumbTextColor: gray;
+
+// Footer
+@footerBgColor: black;
+@footerTextColor: #4A70D1;
+@footerBorder: darkgray;
+
+// Links
+@linkColor: #619EBB;
+@linkVisitedColor: #BB605F;
+@linkHoverColor: #8A6792;
+
+//Sidebar
+@sidebarBgColor: lighten(@headerColor, 10%);
+@sidebarBorder: lighten(@headerColor, 30%);
+@sidebarLinkColor: #619EBB;
+@sidebarVisitedColor: #BB605F;
+@sidebarHoverColor: #8A6792;
+
+/** -----------------------------------------------------------------
+ * Body
+ */
+.inner-wrap {
+    background-color: @canvasColor;
+}
+
+/** -----------------------------------------------------------------
+ * Font adjustments
+ */
+.font {
+    color: @fontColor;
+}
+@colorH1BorderBottom:       @fontColor;
+@colorH2BorderBottom:       @fontColor;
+@colorH3BorderBottom:       @fontColor;
+@colorTypographyMark:       @fontColor;
+@colorTableRowHover:        @fontColor;
+@bgColorTableRowHover:      #202020;
+@bgColorCodeInline:         #282828;
+@bgColorCodeBlock:          #282828;
+
+
+ /** ---------------------------------------------------------------
+  *  Footer
+  */
+.outer-wrap-footer {
+    background-color: @canvasColor;
+}
+
+/** -----------------------------------------------------------------
+ *  Byline
+ */
+.byline {
+    border: 1px solid @fontColor;
+}

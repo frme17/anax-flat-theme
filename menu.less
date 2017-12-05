@@ -5,28 +5,17 @@
 @maxButtonFontSize: 2em;
 @navbarItemBgColor: @buttonColor;
 @navbarItemColor: @buttonTextColor;
-@navbarItemHoverColor: @buttonTextColor;
+@navbarItemHoverColor: @buttonHoverTextColor;
 @navbarItemHoverBgColor: @buttonHoverColor;
 @navbarItemSelectedColor: @buttonTextColor;
 @navbarItemSelectedBgColor: @buttonSelectedColor;
 
 // Size each item in the header
-/*.site-logo-text,
-.navbar2,
-.profile {
-    float: left;
-    width: 30%;
-}
-*/
 .site-header {
     .column(12);
     .adjustwidth-round(12);
-    height: @magicNumber * 2;
+    height: @magicNumber * 4;
     background-color: @headerColor;
-}
-
-.site-logo-text {
-    .column(3);
 }
 
 .site-logo-text-icon {
@@ -45,9 +34,16 @@
 
 // Site title
 .site-logo-text {
+    .column(3);
     font-size: 2em;
-
-    a {
+    a:link {
+        color: @anaxFlatText;
+    }
+    a:visited {
+        color: @anaxFlatText;
+    }
+    a:hover {
+        color: @anaxFlatHover;
         text-decoration: none;
     }
 }

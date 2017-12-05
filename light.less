@@ -1,0 +1,53 @@
+/**
+* import Default theme
+*/
+@import url(style.less);
+
+/** -----------------------------------------------------------------
+ *  Colors
+ */
+@canvasColor: white;
+
+// Navigation-menu
+@headerColor: #DADADA;
+@buttonColor: lighten(@headerColor, 10%);
+@buttonHoverColor: darken(@headerColor, 20%);
+@buttonSelectedColor: lighten(@headerColor, 10%);
+@buttonTextColor: #7A807D;
+@buttonHoverTextColor: white;
+@anaxFlatText: #7A807D;
+@anaxFlatHover: white;
+
+
+//Navigation on report sides
+@buttonNextPrevColor: #7A807D;
+
+//Breadcrumbs
+@breadcrumbColor: darken(@headerColor, 20%);
+@breadcrumbBgColor: lighten(@headerColor, 10%);
+@breadcrumbBorderColor: darken(@headerColor, 20%);
+@breadcrumbTextColor: white;
+
+// Footer
+@footerBgColor: lighten(@headerColor, 10%);
+@footerTextColor: #7A807D;
+@footerBorder: darken(@headerColor, 20%);
+
+// Links
+@linkColor: #619EBB;
+@linkVisitedColor: #BB605F;
+@linkHoverColor: #8A6792;
+
+//Sidebar
+@sidebarBgColor: white;
+@sidebarBorder: darken(@headerColor, 20%);
+@sidebarLinkColor: #619EBB;
+@sidebarVisitedColor: #BB605F;
+@sidebarHoverColor: #8A6792;
+
+ /** ---------------------------------------------------------------
+  *  Footer
+  */
+.outer-wrap-footer {
+    background-color: @canvasColor;
+}
