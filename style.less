@@ -64,7 +64,7 @@
 
 
 /** -----------------------------------------------------------
- * Sidebar
+ * Sidebar left
  */
 .sidebar-left {
     border-right: 1px solid @sidebarBorder;
@@ -81,6 +81,13 @@
         color: @sidebarHoverColor;
         text-decoration: underline;
     }
+}
+
+/** ------------------------------------------------------------
+ * Previous-next
+ */
+.next-previous {
+    .clearfix();
 }
 
 /** ------------------------------------------------------------
@@ -134,7 +141,8 @@
 }
 
 @media screen and (max-width: 570px) {
-.sidebar-left {
+    .sidebar-left {
+        .column(12);
         border-bottom: 1px solid @sidebarBorder;
         margin-top: 0px;
     }

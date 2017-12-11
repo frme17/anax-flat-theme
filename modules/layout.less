@@ -35,6 +35,11 @@
     .column(8);
 }
 
+.main.has-sidebar-right {
+    .column(8);
+    .push(1);
+}
+
 .main {
     .column(8);
     .push(2);
@@ -53,12 +58,22 @@
     margin-top: @magicNumber * 3;
 }
 
+.sidebar-right {
+    .column(3);
+}
+
 .footer-column {
     .column(4);
 }
 
 .site-footer {
     .column(12);
+}
+
+.author-byline {
+    border: 1px solid black;
+    margin-bottom: @magicNumber;
+    .clearfix();
 }
 
 .byline {

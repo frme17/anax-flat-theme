@@ -13,6 +13,11 @@
 */
 @import url(menu.less);
 
+/**
+ * Figure, Handle Figure sizes and Responsivity for pictures using [FIGURE]
+ */
+@import url(figure.less);
+
 /** --------------------------------------------------------------
  *  Logo images
  */
@@ -84,6 +89,17 @@
 }
 
 /** -------------------------------------------------------------
+ * Sidebar right
+ */
+.sidebar-right {
+    border-left: 1px solid @sidebarBorder;
+    padding-left:5px;
+    padding-right:5px;
+    .adjustwidth-border(3, 11);
+}
+
+
+/** -------------------------------------------------------------
  * Margin on image, to make text flow Typographically
  */
 .leninbasket {
@@ -106,6 +122,15 @@ img {
 
 
 @media screen and (max-width: 960px) {
+    .figure {
+        &.blogg-image {
+            float: none;
+            margin-left: 0px;
+            margin-right: 8px;
+            .clearfix();
+        }
+    }
+
     .inner-wrap {
         width: 100%;
     }
@@ -141,6 +166,13 @@ img {
         padding-left: 5px;
     }
 
+    .sidebar-right {
+        .column(12);
+        border-top: 1px solid @sidebarBorder;
+        border-left: none;
+    }
+
+
 }
 
 @media screen and (max-width: 700px) {
@@ -154,11 +186,21 @@ img {
 }
 
 @media screen and (max-width: 570px) {
-.sidebar-left {
-    .column(12);
-    }
-    .main {
+    .main,
+    .main.has-sidebar-left,
+    .main.has-sidebar-right {
         .column(12);
+        width: 95.5%;
+        margin-left: 1.04166667%;
+        padding-left: 5px;
+    }
+    .sidebar-left,
+    .sidebar-right {
+        .column(12);
+    }
+
+    .breadcrumb-wrap {
+        height: @magicNumber * 2;
     }
 
 }
