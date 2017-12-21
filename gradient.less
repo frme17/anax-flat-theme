@@ -1,0 +1,127 @@
+/**
+* import Default theme
+*/
+@import url(style.less);
+
+/** -----------------------------------------------------------------
+ *  Colors
+ */
+@canvasColor: #EBF5FF;
+@fontColor: #7A807D;
+
+// Navigation-menu
+@headerColor: #B3C5E2;
+@buttonColor: lighten(@headerColor, 10%);
+@buttonHoverColor: darken(@headerColor, 20%);
+@buttonSelectedColor: lighten(@headerColor, 10%);
+@buttonTextColor: #7A807D;
+@buttonHoverTextColor: white;
+@anaxFlatText: #7A807D;
+@anaxFlatHover: white;
+
+
+//Navigation on report sides
+@buttonNextPrevColor: #7A807D;
+
+//Breadcrumbs
+@breadcrumbColor: darken(@headerColor, 20%);
+@breadcrumbBgColor: lighten(@headerColor, 10%);
+@breadcrumbBorderColor: darken(@headerColor, 20%);
+@breadcrumbTextColor: white;
+
+// Footer
+@footerBgColor: lighten(@headerColor, 10%);
+@footerTextColor: #7A807D;
+@footerBorder: darken(@headerColor, 20%);
+
+// Links
+@linkColor: #619EBB;
+@linkVisitedColor: #BB605F;
+@linkHoverColor: #8A6792;
+
+//Sidebar
+@sidebarBgColor: white;
+@sidebarBorder: darken(@headerColor, 20%);
+@sidebarLinkColor: #619EBB;
+@sidebarVisitedColor: #BB605F;
+@sidebarHoverColor: #8A6792;
+
+/** ------------------------------------------------------------------
+ * width
+ */
+.inner-wrap {
+    width: auto;
+}
+
+/** ------------------------------------------------------------------
+ * Flash and logo
+ */
+.flash-wrap {
+    img {
+        width: inherit;
+    }
+    float: none;
+}
+
+.logo-1 {
+    display: none;
+}
+
+/** ------------------------------------------------------------------
+ *   Gradients on header and footer
+ */
+.site-header {
+    background-color: unset;
+    background: linear-gradient(@headerColor, white);
+}
+
+.inner-wrap-footer {
+    background: linear-gradient(white, @headerColor);
+}
+
+/** -----------------------------------------------------------------
+ *   Images as background on design-element page
+ */
+
+.gradient1 {
+    width: 45%;
+    transform: rotate(27deg);
+    opacity: 0.4;
+    position: absolute;
+    top: 618px;
+    left: 137px;
+}
+.gradient2 {
+    width: 45%;
+    transform: rotate(340deg);
+    opacity: 0.3;
+    position: absolute;
+    top: 994px;
+    left: 669px;
+}
+
+/** -----------------------------------------------------------------
+ * Font adjustments
+ */
+.font {
+    color: @fontColor;
+}
+@colorH1BorderBottom:       @fontColor;
+@colorH2BorderBottom:       @fontColor;
+@colorH3BorderBottom:       @fontColor;
+@colorTypographyMark:       @fontColor;
+@colorTableRowHover:        @fontColor;
+
+ /** ---------------------------------------------------------------
+  *  Footer
+  */
+.outer-wrap-footer {
+    background-color: @canvasColor;
+}
+
+/** -----------------------------------------------------------------
+ *  Byline
+ */
+.byline {
+    border: 1px solid @fontColor;
+}

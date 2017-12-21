@@ -1,0 +1,129 @@
+/**
+* import Default theme
+*/
+@import url(style.less);
+
+/** -----------------------------------------------------------------
+ *  Colors
+ */
+@canvasColor: #EBF5FF;
+@fontColor: #786C6B;
+
+// Navigation-menu
+@headerColor: #94A4C3;
+@buttonColor: lighten(@headerColor, 10%);
+@buttonHoverColor: darken(@headerColor, 20%);
+@buttonSelectedColor: lighten(@headerColor, 10%);
+@buttonTextColor: #786C6B;
+@buttonHoverTextColor: white;
+@anaxFlatText: #786C6B;
+@anaxFlatHover: white;
+
+
+//Navigation on report sides
+@buttonNextPrevColor: #786C6B;
+
+//Breadcrumbs
+@breadcrumbColor: darken(@headerColor, 20%);
+@breadcrumbBgColor: #F6F3EC;
+@breadcrumbBorderColor: darken(@headerColor, 20%);
+@breadcrumbTextColor: white;
+
+// Footer
+@footerBgColor: lighten(@headerColor, 10%);
+@footerTextColor: #786C6B;
+@footerBorder: darken(@headerColor, 20%);
+
+// Links
+@linkColor: #619EBB;
+@linkVisitedColor: #BB605F;
+@linkHoverColor: #8A6792;
+
+//Sidebar
+@sidebarBgColor: white;
+@sidebarBorder: darken(@headerColor, 20%);
+@sidebarLinkColor: #619EBB;
+@sidebarVisitedColor: #BB605F;
+@sidebarHoverColor: #8A6792;
+
+/** -----------------------------------------------------------------
+ *   Navigation buttons
+ */
+.rm-navbar-top {
+    li {
+        border-style: outset;
+        line-height: 0.1em;
+    }
+}
+
+/** -----------------------------------------------------------------
+ * background textures
+ */
+body{
+    background-image: url(../img/texture.jpg);
+    background-repeat:repeat;
+}
+.inner-wrap {
+    background-image: url(../img/leather.jpg);
+    background-repeat:repeat;
+}
+
+
+/** -----------------------------------------------------------------
+ * Font adjustments
+ */
+.font {
+    color: @fontColor;
+}
+@colorH1BorderBottom:       @fontColor;
+@colorH2BorderBottom:       @fontColor;
+@colorH3BorderBottom:       @fontColor;
+@colorTypographyMark:       @fontColor;
+@colorTableRowHover:        @fontColor;
+
+/** -----------------------------------------------------------------
+ *  Site header
+    */
+.site-header {
+    border-bottom: 7px solid crimson;
+}
+
+/** -----------------------------------------------------------------
+ *  Flash
+ */
+.flash-wrap {
+    opacity: 0.5;
+    img {
+        border-radius: 10px;
+        border-bottom: 6px solid;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Logo image
+ */
+.logo-1 {
+    display: none;
+}
+
+/** ----------------------------------------------------------------
+ *  Breadcrumbs
+ */
+.breadcrumb-list {
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+}
+
+ /** ---------------------------------------------------------------
+  *  Footer
+  */
+.outer-wrap-footer {
+    background-image: url(../img/texture.jpg);
+}
+
+/** -----------------------------------------------------------------
+ *  Byline
+ */
+.byline {
+    border: 1px solid @fontColor;
+}

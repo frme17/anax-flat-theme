@@ -1,0 +1,174 @@
+/**
+* import Default theme
+*/
+@import url(style.less);
+
+/** -----------------------------------------------------------------
+ *  Colors
+ */
+@canvasColor: #01A0E2;
+@fontColor: darkblue;
+
+// Navigation-menu
+@headerColor: #0064AC;
+@buttonColor: #01A0E2;
+@buttonHoverColor: #4EC7EC;
+@buttonSelectedColor: #01A0E2;
+@buttonTextColor: white;
+@buttonHoverTextColor: white;
+@anaxFlatText: #FC75BF;
+@anaxFlatHover: #E2007A;
+
+
+//Navigation on report sides
+@buttonNextPrevColor: #7A807D;
+
+//Breadcrumbs
+@breadcrumbColor: #E2007A;
+@breadcrumbBgColor: #FC75BF;
+@breadcrumbBorderColor: darken(@breadcrumbColor, 30%);
+@breadcrumbTextColor: white;
+
+// Footer
+@footerBgColor: #0064AC;
+@footerTextColor: #7ADA5D;
+@footerBorder: lighten(@footerBgColor, 20%);
+
+// Links
+@linkColor: darkblue;
+@linkVisitedColor: purple;
+@linkHoverColor: black;
+
+//Sidebar
+@sidebarBgColor: #FEF788;
+@sidebarBorder: #FAB700;
+@sidebarLinkColor: #619EBB;
+@sidebarVisitedColor: #BB605F;
+@sidebarHoverColor: #8A6792;
+
+/** -----------------------------------------------------------------
+ * Font adjustments
+ */
+.font {
+    color: @fontColor;
+}
+@colorH1BorderBottom:       @fontColor;
+@colorH2BorderBottom:       @fontColor;
+@colorH3BorderBottom:       @fontColor;
+@colorTypographyMark:       @fontColor;
+@colorTableRowHover:        @fontColor;
+
+/** ----------------------------------------------------------------
+ *  background image
+ */
+ body{
+     background-image: url(../img/movement.jpg);
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+/** ----------------------------------------------------------------
+ *  Hover effects
+ */
+
+.rm-default {
+    li {
+        line-height: 2.5em;
+    }
+}
+
+.rm-desktop {
+    a {
+        transition: 0.4s ease;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+.rm-desktop {
+    a:hover {
+        border-top: 4px solid #ffffff;
+        border-bottom: 4px solid #ffffff;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+/** ---------------------------------------------------------------
+ *  Design elements on Design-principle page
+ */
+
+.variety1 {
+    width: 80px;
+    height: 80px;
+    background-color: @canvasColor;
+    position: relative;
+    bottom: 400px;
+    left: -122px;
+    border-radius: 10px;
+}
+
+.variety2 {
+    width: 80px;
+    height: 80px;
+    background-color: @canvasColor;
+    position: relative;
+    bottom: 380px;
+    left: -122px;
+    border-radius: 10px;
+}
+.variety3 {
+    width: 80px;
+    height: 80px;
+    background-color: @canvasColor;
+    position: relative;
+    bottom: 360px;
+    left: -122px;
+    border-radius: 10px;
+}
+.variety4 {
+    width: 80px;
+    height: 80px;
+    background-color: @canvasColor;
+    position: relative;
+    bottom: 340px;
+    left: -122px;
+    border-radius: 10px;
+}
+
+.variety5 {
+    width: 80px;
+    height: 80px;
+    background-color: @breadcrumbBgColor;
+    position: relative;
+    bottom: 320px;
+    left: -122px;
+    border-radius: 10px;
+}
+
+.variety6 {
+    width: 80px;
+    height: 80px;
+    background-color: @canvasColor;
+    position: relative;
+    bottom: 300px;
+    left: -122px;
+    border-radius: 10px;
+}
+.kugghjul {
+    float: right;
+}
+ /** ---------------------------------------------------------------
+  *  Footer
+  */
+.outer-wrap-footer {
+    background-color: @canvasColor;
+}
+
+/** -----------------------------------------------------------------
+ *  Byline
+ */
+.byline {
+    border: 1px solid @fontColor;
+}

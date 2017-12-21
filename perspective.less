@@ -1,0 +1,150 @@
+/**
+* import Default theme
+*/
+@import url(style.less);
+
+/** -----------------------------------------------------------------
+ *  Colors
+ */
+@canvasColor: #337847;
+@fontColor: black;
+
+// Navigation-menu
+@headerColor: #337847;
+@buttonColor: lighten(@headerColor, 10%);
+@buttonHoverColor: darken(@headerColor, 20%);
+@buttonSelectedColor: lighten(@headerColor, 10%);
+@buttonTextColor: white;
+@buttonHoverTextColor: white;
+@anaxFlatText: white;
+@anaxFlatHover: black;
+
+
+//Navigation on report sides
+@buttonNextPrevColor: #7A807D;
+
+//Breadcrumbs
+@breadcrumbColor: darken(@headerColor, 20%);
+@breadcrumbBgColor: lighten(@headerColor, 10%);
+@breadcrumbBorderColor: darken(@headerColor, 20%);
+@breadcrumbTextColor: white;
+
+// Footer
+@footerBgColor: lighten(@headerColor, 10%);
+@footerTextColor: white;
+@footerBorder: darken(@headerColor, 20%);
+
+// Links
+@linkColor: #2E5F8A;
+@linkVisitedColor: #9B1C2E;
+@linkHoverColor: black;
+
+//Sidebar
+@sidebarBgColor: white;
+@sidebarBorder: darken(@headerColor, 20%);
+@sidebarLinkColor: #619EBB;
+@sidebarVisitedColor: #BB605F;
+@sidebarHoverColor: #8A6792;
+
+/** -----------------------------------------------------------------
+ * Font adjustments
+ */
+.font {
+    color: @fontColor;
+}
+@headerBorderColor: red;
+@colorH1BorderBottom:       @headerBorderColor;
+@colorH2BorderBottom:       @headerBorderColor;
+@colorH3BorderBottom:       @headerBorderColor;
+@colorTypographyMark:       @fontColor;
+@colorTableRowHover:        @fontColor;
+
+/** -----------------------------------------------------------------
+ * background image
+ */
+body{
+    background-image: url(../img/perspektiv.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/** ----------------------------------------------------------------
+ *  Opacity on header and footer
+ */
+
+.inner-wrap-header,
+.inner-wrap-flash,
+.inner-wrap-breadcrumb,
+.outer-wrap-footer {
+    opacity: 0.8;
+}
+
+/*
+ * Hide logo
+ */
+ .logo-1 {
+     display: none;
+ }
+
+/** ---------------------------------------------------------------
+ *  Design elements on Design-principle page
+ */
+
+.balance1 {
+    width: 50px;
+    height: 50px;
+    background-color: @canvasColor;
+    position: fixed;
+    top: 380px;
+    left: 550px;
+    opacity: 0.6;
+}
+
+.balance2 {
+    width: 120px;
+    height: 120px;
+    background-color: @canvasColor;
+    position: fixed;
+    top: 184px;
+    left: 330px;
+    opacity: 0.6;
+}
+
+.balance3 {
+    width: 250px;
+    height: 250px;
+    background-color: @canvasColor;
+    position: fixed;
+    top: 472px;
+    left: 100px;
+    opacity: 0.6;}
+
+.balance4 {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    position: fixed;
+    top: 362px;
+    right: 300px;
+    opacity: 0.6;
+    border-radius: 125px;
+}
+
+.kugghjul {
+    display: none;
+}
+ /** ---------------------------------------------------------------
+  *  Footer
+  */
+.outer-wrap-footer {
+    background-color: @canvasColor;
+}
+
+/** -----------------------------------------------------------------
+ *  Byline
+ */
+.byline {
+    border: 1px solid @fontColor;
+}
